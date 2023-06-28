@@ -39,7 +39,7 @@ try {
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Locatie">Informatie</a></li>
                 <li><a href="reserveren.php">Reserveren</a></li>
-                <li><a href="Informatie">Locatie</a></li>
+                <li><a href="beschikbaarheid.html">Beschikbaarheid</a></li>
                 <li><button onclick="document.getElementById('id01').style.display='block'"
                         style="width:auto;">Login</button>
                 </li>
