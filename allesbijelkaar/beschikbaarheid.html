@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Campingbeheer</title>
+    <link rel="stylesheet" href="beschikbaarheid.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="activiteiten.html">Activiteiten</a></li>
+                <li><a href="reserveren.php">Reserveren</a></li>
+                <li><a href="beschikbaarheid.html">beschikbaarheid</a></li>
+                <li><button onclick="document.getElementById('id01').style.display='block'"
+                        style="width:auto;">Login</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <a href="admin.html">Admin Login</a>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+    </header>
+
+    <h1>Campingbeheer</h1>
+
+    <form>
+        <label for="plekken">Aantal beschikbare plekken:</label>
+        <input type="number" id="plekken" name="plekken" min="0">
+        <button type="submit" id="opslaan">Opslaan</button>
+    </form>
+
+    <script>
+        // Eventlistener voor het formulier
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Voorkomt dat de pagina wordt vernieuwd
+
+            // Haal de waarde van het inputveld op
+            var aantalPlekken = document.getElementById('plekken').value;
+
+            // Stuur de waarde naar de server (hier simuleren we het opslaan)
+            // Je kunt deze waarde vervangen door een API-aanroep om het naar een server te sturen
+            console.log('Aantal plekken opgeslagen: ' + aantalPlekken);
+        });
+    </script>
+
+    <footer>
+        <div class="contact">
+            <p>Locatie: pittoreske Otterlo</p>
+            <p>Emailadres: Campingvillage@gmail.com</p>
+            <p>Telefoonnummer: 020 633782347</p>
+        </div>
+    </footer>
+</body>
+
+</html>

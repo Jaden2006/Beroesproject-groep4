@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activiteiten</title>
+    <link rel="stylesheet" href="activiteiten.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Activiteiten">Activiteiten</a></li>
+                <li><a href="reserveren.php">Reserveren</a></li>
+                <li><a href="beschikbaarheid.html">beschikbaarheid</a></li>
+                <li><button onclick="document.getElementById('id01').style.display='block'"
+                        style="width:auto;">Login</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <a href="admin.html">Admin Login</a>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+    </header>
+
+    <h1>Meld je aan voor activiteiten!</h1>
+    <main>
+        <section>
+            <h2>Registratie formulier</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="Telefoon">Telefoon:</label>
+                <input type="tel" id="Telefoon" name="Telefoon" required>
+
+                <label for="activity">Activity:</label>
+                <select id="activity" name="activity">
+                    <option value="mountainbiking">Mountain Biking</option>
+                    <option value="knutselen">Knutselen</option>
+                    <option value="jeu-de-boele">Jeu de Boele Wedstrijd</option>
+                    <option value="water-aerobics">Water Aerobics</option>
+                </select>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <p>Locatie: pittoreske Otterlo</p>
+            <p>Emailadres: Campingvillage@gmail.com</p>
+            <p>Telefoonnummer: 020 633782347</p>
+        </div>
+    </footer>
+</body>
+
+</html>
